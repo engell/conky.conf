@@ -114,19 +114,21 @@ ${voffset 4}${font Pie charts for maps:size=14}3${font} ${voffset -5}Boot:
 ${voffset 4}${fs_used /boot}/${fs_size /boot} ${alignr}${fs_bar 8,60 /boot}
 
 NETWORK ${hr 2}
-${voffset -20}
+${voffset -30}
 ${if_existing /proc/net/route enp2s0}
+${voffset 0}
 ${alignc}Wired
-${voffset -5}
+${voffset -10}
 ${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp2s0}
 ${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp2s0 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp2s0}${alignr}${downspeedgraph enp2s0 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp2s0}
 ${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown enp2s0}
+${voffset -30}
 ${endif} 
 ${if_existing /proc/net/route wlo1}
 ${alignc}WiFi
-${voffset -5}
+${voffset -10}
 ${voffset 4}${font PizzaDude Bullets:size=14}u${font} ID: ${alignr}${wireless_essid wlo1}
 ${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr wlo1}
 ${voffset 4}${font PizzaDude Bullets:size=14}Z${font} Señal: ${wireless_link_qual_perc wlo1}% ${alignr}${wireless_link_bar 8,60 wlo1}
@@ -134,10 +136,13 @@ ${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed wlo1}${align
 ${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup wlo1}
 ${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown wlo1}
+${voffset -30}
 ${endif} 
 ${if_existing /proc/net/route enp0s18f2u3}
+${voffset -20}
 ${alignc}Android
-${alignr}${addr enp0s18f2u3}
+${voffset -10}
+${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp0s18f2u3}
 ${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp0s18f2u3}${alignr}${upspeedgraph wlo1 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp0s18f2u3}${alignr}${downspeedgraph wlo1 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp0s18f2u3}
