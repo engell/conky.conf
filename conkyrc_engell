@@ -114,11 +114,12 @@ ${voffset 4}${font Pie charts for maps:size=14}3${font} ${voffset -5}Boot:
 ${voffset 4}${fs_used /boot}/${fs_size /boot} ${alignr}${fs_bar 8,60 /boot}
 
 NETWORK ${hr 2}
-${voffset -35}
+${voffset -20}
 ${if_existing /proc/net/route enp2s0}
 ${alignc}Wired
-${alignr}${addr enp2s0}
-${voffset -6}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp2s0 8,60 black black}
+${voffset -5}
+${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp2s0}
+${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp2s0 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp2s0}${alignr}${downspeedgraph enp2s0 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp2s0}
 ${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown enp2s0}
