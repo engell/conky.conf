@@ -120,8 +120,8 @@ ${voffset 0}
 ${alignc}Wired
 ${voffset -10}
 ${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp0s3}
-${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp0s3 8,60 black black}
-${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp2s0}${alignr}${downspeedgraph enp0s3 8,60 black black}
+${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp0s3}${alignr}${upspeedgraph enp0s3 8,60 black black}
+${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp0s3}${alignr}${downspeedgraph enp0s3 8,60 black black}
 ${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp0s3}
 ${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown enp0s3}
 ${voffset -30}
