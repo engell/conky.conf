@@ -17,8 +17,8 @@ total_run_times 0
 
 own_window yes
 own_window_transparent yes
-#own_window_type override
-own_window_type desktop
+own_window_type override
+#own_window_type desktop
 #own_window_type normal #use this if you want a nice shadow to appear around conky
 
 # If own_window is yes, these window manager hints may be used
@@ -89,9 +89,9 @@ use_spacer none
 TEXT
 SYSTEM ${hr 2}
 ${alignc 24}${font Noto Sans CJK JP Black:size=14}${nodename}${font}
-${alignr}HP Pavilion dv4
+${alignr}VirtualBox
 #${voffset 2}${font Arial Black:style=Bold:size=12}#!${font} CrunchBang Linux ${alignr}08.10.01
-${font OpenLogos:size=16}u${font} Kernel: ${alignr}${kernel}
+${font OpenLogos:size=16}J${font} Kernel: ${alignr}${kernel}
 ${font StyleBats:size=16}A${font} CPU1: ${cpu cpu1}% ${alignr}${cpugraph cpu1 12,60}
 ${font StyleBats:size=16}A${font} CPU2: ${cpu cpu2}% ${alignr}${cpugraph cpu2 12,60}
 ${font StyleBats:size=16}A${font} CPU3: ${cpu cpu3}% ${alignr}${cpugraph cpu3 12,60}
@@ -110,20 +110,20 @@ ${voffset 4}${font Pie charts for maps:size=14}2${font} ${voffset -5}Root:
 ${voffset 4}${fs_used /}/${fs_size /} ${alignr}${fs_bar 8,60 /}
 ${voffset 4}${font Pie charts for maps:size=14}1${font} ${voffset -5}Home:
 ${voffset 4}${fs_used /home}/${fs_size /home} ${alignr}${fs_bar 8,60 /home}
-${voffset 4}${font Pie charts for maps:size=14}3${font} ${voffset -5}Boot:
-${voffset 4}${fs_used /boot}/${fs_size /boot} ${alignr}${fs_bar 8,60 /boot}
+#${voffset 4}${font Pie charts for maps:size=14}3${font} ${voffset -5}Boot:
+#${voffset 4}${fs_used /boot}/${fs_size /boot} ${alignr}${fs_bar 8,60 /boot}
 
 NETWORK ${hr 2}
 ${voffset -30}
-${if_existing /proc/net/route enp2s0}
+${if_existing /proc/net/route enp0s3}
 ${voffset 0}
 ${alignc}Wired
 ${voffset -10}
-${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp2s0}
-${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp2s0 8,60 black black}
-${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp2s0}${alignr}${downspeedgraph enp2s0 8,60 black black}
-${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp2s0}
-${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown enp2s0}
+${voffset 4}${font PizzaDude Bullets:size=14}C${font} IP: ${alignr}${addr enp0s3}
+${voffset 4}${font PizzaDude Bullets:size=14}O${font} Up: ${upspeed enp2s0}${alignr}${upspeedgraph enp0s3 8,60 black black}
+${voffset 4}${font PizzaDude Bullets:size=14}U${font} Down: ${downspeed enp2s0}${alignr}${downspeedgraph enp0s3 8,60 black black}
+${voffset 4}${font PizzaDude Bullets:size=14}N${font} Upload: ${alignr}${totalup enp0s3}
+${voffset 4}${font PizzaDude Bullets:size=14}T${font} Download: ${alignr}${totaldown enp0s3}
 ${voffset -30}
 ${endif} 
 ${if_existing /proc/net/route wlo1}
